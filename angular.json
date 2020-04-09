@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tp-ortiz"
+    }
+  },
+  "defaultProject": "tp-ortiz",
+  "cli": {
+    "analytics": "068a0cff-3b44-470c-939e-a3cdb7c4945c"
+  }
 }
