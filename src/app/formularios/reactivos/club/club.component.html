@@ -1,0 +1,38 @@
+<h1>Club de Futbol</h1>
+
+<form [formGroup]="clubForm" (ngSubmit)="submit()">
+  <label
+    >Nombre
+    <input type="text" formControlName="nombre" />
+  </label>
+  <label>
+    Fecha De Creacion
+    <input type="text" formControlName="fechaDeCreacion" />
+  </label>
+  <div>
+    <br />
+    <h2>Direccion del Club</h2>
+    <label
+      >Calle
+      <input type="text" formControlName="calle" />
+    </label>
+    <label>
+      Numero
+      <input type="text" formControlName="numero" />
+    </label>
+  </div>
+  <div formArrayName="jugadores">
+    <br />
+    <h2>Jugadores</h2>
+    <button mat-stroked-button color="acento" (click)="agregarJugadores()">
+      Agregar Jugador
+    </button>
+    <br />
+    <div *ngFor="let jugador of jugadores.controls; let i = index">
+      <label> Jugador <input type="text" [formControlName]="i" /> </label>
+    </div>
+  </div>
+
+  Status Formulario: {{ clubForm.status }}
+  <button type="submit" mat-raised-button color="primary">Guardar</button>
+</form>
