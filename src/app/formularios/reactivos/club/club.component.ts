@@ -35,7 +35,7 @@ export class ClubComponent {
 
   submit() {
     debugger;
-    this.clubForm.value();
+    this.clubForm.value;
 
     this.clubForm.setValue({
       nombre: '',

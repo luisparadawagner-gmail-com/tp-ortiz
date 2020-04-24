@@ -1,16 +1,18 @@
 <h1>Club de Futbol</h1>
 
 <form [formGroup]="clubForm" (ngSubmit)="submit()">
-  <label
-    >Nombre
-    <input type="text" formControlName="nombre" />
-  </label>
-  <label>
-    Fecha De Creacion
-    <input type="text" formControlName="fechaDeCreacion" />
-  </label>
   <div>
-    <br />
+    <label
+      >Nombre
+      <input type="text" formControlName="nombre" />
+    </label>
+    <label>
+      Fecha De Creacion
+      <input type="text" formControlName="fechaDeCreacion" />
+    </label>
+  </div>
+  <br />
+  <div formGroupName="direccion">
     <h2>Direccion del Club</h2>
     <label
       >Calle
@@ -24,7 +26,7 @@
   <div formArrayName="jugadores">
     <br />
     <h2>Jugadores</h2>
-    <button mat-stroked-button color="acento" (click)="agregarJugadores()">
+    <button mat-stroked-button color="warn" (click)="agregarJugadores()">
       Agregar Jugador
     </button>
     <br />
