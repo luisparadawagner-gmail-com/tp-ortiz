@@ -46,7 +46,5 @@ export class ClubComponent {
       },
       jugadores: [''],
     });
-
-    this.clubForm.patchValue({ edad: 35 });
   }
 }
